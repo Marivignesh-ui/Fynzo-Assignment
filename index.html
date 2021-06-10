@@ -5,8 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry Form</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
+    <h1>Contact details</h1>
+    <div>
+        <form action=".." >
+            <div class="container">
+              <div class="sectionheading">
+                <h2>Section 1</h2>
+              </div>
+              <div id="formpage_1" class="visibleblock section"> 
+                <h3>Enquiry Form</h3>
+                <button class="primarybutton start"  type="button" onclick="pagechange(1,2)"><strong>Start</strong><div><span class="material-icons md-18">arrow_forward_ios</span></div></button>
+              </div>
+            </div>
+            <div class="container">
+              <div class="sectionheading">
+                <h2>Section 2</h2>
+              </div>
+              <div id="formpage_2"  class="hiddenblock">
+                <h3><label for="fname">Name</label></h3>
+                <input class="textinput" type="text" name="fname" id="fname" placeholder="Your name" onkeyup="validate('section1')" /><br>
+                <div id="section1error" class="error"></div>
+                <div class="buttons">
+                <button class="secondarybutton" type="button" onclick="pagechange(2,1);"><div><span class="material-icons left">arrow_back_ios</span></div>back</button>
+                <button class="primarybutton" type="button" id="disabled" name="section1next" onclick="pagechange(2,3);">Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+                <div class="sectionheading">
+                  <h2>Section 3</h2>
+                </div>
+                <div id="formpage_3"  class="hiddenblock">
+                  <h3><label for="dob">Date of Birth</label></h3>
+                  <input class="textinput" type="date" name="dob" id="dob" onchange="validate('section2')" /><br>
+                  <div id="section2error" class="error"></div>
+                  <div class="buttons">
+                    <button class="secondarybutton" type="button" value="back" onclick="pagechange(3,2);" ><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
+                  <button class="primarybutton" type="button" id="disabled" name="section2next"  onclick="pagechange(3,4);" >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                  </div>
+                </div>
+            </div>
+            <div class="container">
+              <div class="sectionheading">
+                <h2>Section 4</h2>
+              </div>
+              <div id="formpage_4" class="hiddenblock">
+                <h3><label for="achievements">Achievements</label></h3>
+                <textarea id="achievements" name="achievements" rows="5" cols="40" placeholder="Your Achievements" onkeydown="validate('section3')"></textarea><br>
+                <div id="section3error" class="error"></div>
+                <div class="buttons">
+                  <button class="secondarybutton" type="button" value="back" onclick="pagechange(4,3);" ><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
+                <button class="primarybutton" type="button" id="disabled" name="section3next"  onclick="pagechange(4,5);" >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="sectionheading">
+                <h2>Section 5</h2>
+              </div>
+              <div id="formpage_5" class="hiddenblock">
+                <h3>Family Members</h3>
+                <input type="checkbox" name="none" id="none" oninput="validate('section4')"/><label class="checklabel" for="none">No one</label><br>
+                <input type="checkbox" name="father" id="father" oninput="validate('section4')"/><label class="checklabel" for="father">Father</label><br>
+                <input type="checkbox" name="mother" id="mother" oninput="validate('section4')"/><label class="checklabel" for="mother">Mother</label><br>
+                <input type="checkbox" name="brother" id="brother" oninput="validate('section4')"/><label class="checklabel" for="brother">Brother</label><br>
+                <input type="checkbox" name="sister" id="sister" oninput="validate('section4')"/><label class="checklabel" for="sister">Sister</label><br>
+                <div id="section4error" class="error"></div>
+                <div class="buttons">
+                  <button class="secondarybutton" type="button" value="back" onclick="pagechange(5,4);" ><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
+                <button class="primarybutton" id="disabled" type="button" name="section4next" onclick="pagechange(5,6);"  >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="sectionheading">
+                <h2>Section 6</h2>
+              </div>
+              <div id="formpage_6" class="hiddenblock">
+                <div class="buttons">
+                  <button class="secondarybutton" type="button" value="back" onclick="pagechange(6,5);"><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
+                <button type="submit" value="Submit"  class="primarybutton" >Submit<div><span class="material-icons right">check</span></div></button>
+                </div>
+              </div>
+            </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
