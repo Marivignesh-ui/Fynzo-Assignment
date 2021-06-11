@@ -15,10 +15,12 @@ function validate(section){
             if(nameinput.length>3){
                 document.getElementById(section+"error").innerText="";
                 nextbutton.id="none";
+                nextbutton.disabled=false;
             }
             else{
                 document.getElementById(section+"error").innerText="Name cannot be less than 3 characters";
                 nextbutton.id="disabled";
+                nextbutton.disabled=true;
             }
             break;
         }
@@ -28,10 +30,12 @@ function validate(section){
             if(dobnum>2017){
                 document.getElementById(section+"error").innerText="Enter valid DOB";
                 nextbutton.id="disabled";
+                nextbutton.disabled=true;
             }
             else{
                 document.getElementById(section+"error").innerText="";
-                nextbutton.id="none";  
+                nextbutton.id="none"; 
+                nextbutton.disabled=false; 
             }
             break;
         }
@@ -40,10 +44,12 @@ function validate(section){
             if(achievements.length>3){
                 document.getElementById(section+"error").innerText="";
                 nextbutton.id="none";
+                nextbutton.disabled=false;
             }
             else{
                 document.getElementById(section+"error").innerText="Enter atleast one acheivement to proceed";
-                nextbutton.id="disabled";  
+                nextbutton.id="disabled"; 
+                nextbutton.disabled=true; 
             }
             break;
         }
@@ -51,8 +57,10 @@ function validate(section){
             if(document.getElementsByName('none')[0].checked || document.getElementsByName('mother')[0].checked || document.getElementsByName('father')[0].checked || document.getElementsByName('brother')[0].checked || document.getElementsByName('sister')[0].checked){
                 document.getElementById(section+"error").innerText="";
                 nextbutton.id="none";
+                nextbutton.disabled=false
             }else{
                 nextbutton.id="disabled";
+                nextbutton.disabled=true;
                 document.getElementById(section+"error").innerText="Select atleast one option to proceed";
             }
             break;

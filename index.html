@@ -17,7 +17,7 @@
               </div>
               <div id="formpage_1" class="visibleblock section"> 
                 <h3>Enquiry Form</h3>
-                <button class="primarybutton start"  type="button" onclick="pagechange(1,2)"><strong>Start</strong><div><span class="material-icons md-18">arrow_forward_ios</span></div></button>
+                <button class="primarybutton start" type="button" onclick="pagechange(1,2)"><strong>Start</strong><div><span class="material-icons md-18">arrow_forward_ios</span></div></button>
               </div>
             </div>
             <div class="container">
@@ -29,8 +29,8 @@
                 <input class="textinput" type="text" name="fname" id="fname" placeholder="Your name" onkeyup="validate('section1')" /><br>
                 <div id="section1error" class="error"></div>
                 <div class="buttons">
-                <button class="secondarybutton" type="button" onclick="pagechange(2,1);"><div><span class="material-icons left">arrow_back_ios</span></div>back</button>
-                <button class="primarybutton" type="button" id="disabled" name="section1next" onclick="pagechange(2,3);">Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                <button class="secondarybutton back" type="button" onclick="pagechange(2,1);"><div><span class="material-icons left">arrow_back_ios</span></div>back</button>
+                <button class="primarybutton" disabled="true" type="button" id="disabled" name="section1next" onclick="pagechange(2,3);">Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
                 </div>
               </div>
             </div>
@@ -44,7 +44,7 @@
                   <div id="section2error" class="error"></div>
                   <div class="buttons">
                     <button class="secondarybutton" type="button" value="back" onclick="pagechange(3,2);" ><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
-                  <button class="primarybutton" type="button" id="disabled" name="section2next"  onclick="pagechange(3,4);" >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                  <button class="primarybutton" type="button" disabled="true" id="disabled" name="section2next"  onclick="pagechange(3,4);" >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
                   </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <div id="section3error" class="error"></div>
                 <div class="buttons">
                   <button class="secondarybutton" type="button" value="back" onclick="pagechange(4,3);" ><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
-                <button class="primarybutton" type="button" id="disabled" name="section3next"  onclick="pagechange(4,5);" >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                <button class="primarybutton" type="button" id="disabled" disabled="true" name="section3next"  onclick="pagechange(4,5);" >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@
                 <div id="section4error" class="error"></div>
                 <div class="buttons">
                   <button class="secondarybutton" type="button" value="back" onclick="pagechange(5,4);" ><div><span class="material-icons left">arrow_back_ios</span></div>Back</button>
-                <button class="primarybutton" id="disabled" type="button" name="section4next" onclick="pagechange(5,6);"  >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
+                <button class="primarybutton" id="disabled" disabled="true" type="button" name="section4next" onclick="pagechange(5,6);"  >Next<div><span class="material-icons right">arrow_forward_ios</span></div></button>
                 </div>
               </div>
             </div>

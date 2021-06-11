@@ -44,13 +44,18 @@ h2{
     margin-left: 2%;
     border: none;
     font-size: medium;
+    font-family: Tahoma;
 }
 .primarybutton:focus{
     background-color: white;
     color: #06B6D4;
     border: 1px solid #06B6D4;
+    
 }
-button:hover{
+/* #none:hover{
+    cursor: pointer;
+} */
+.start,#none,.back:hover{
     cursor: pointer;
 }
 .secondarybutton{
@@ -111,10 +116,12 @@ textarea:focus{
     outline:none;  
 }
 #disabled{
-  pointer-events: none;
-  cursor: not-allowed;
+  /* pointer-events: none; */
   opacity: 0.35;
   filter: alpha(opacity=35);
+}
+#disabled:hover{
+    cursor: not-allowed;
 }
 .start{
     margin-left: 0px;
